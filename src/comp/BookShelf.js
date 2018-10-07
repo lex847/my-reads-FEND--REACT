@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import Books from './Books'
 class BookShelf extends Component {
 
     state = {
@@ -56,7 +56,7 @@ class BookShelf extends Component {
             <div className="bookshelf-books">
                 <ol className="books-grid">
                 <li>
-                   
+                   <Books/>
                 </li>
                
                 </ol>
@@ -68,7 +68,7 @@ class BookShelf extends Component {
                 <ol className="books-grid">
                            
                 <li>
-                    
+                    <Books/>
                 </li>
                 </ol>
             </div>
@@ -78,10 +78,8 @@ class BookShelf extends Component {
             <div className="bookshelf-books">
                 <ol className="books-grid">
                 <li>
-                    
+                    <Books/>
                 </li>
-                 
-                
                 </ol>
             </div>
             </div>
