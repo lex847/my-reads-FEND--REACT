@@ -57,9 +57,17 @@ class BookShelf extends Component {
             <h2 className="bookshelf-title">Currently Reading</h2>
             <div className="bookshelf-books">
                 <ol className="books-grid">
-                <li>
-                   <Books/>
-                </li>
+                {this.props.bookList.filter(function(book){
+                    if (book.shelf === 'currentlyReading'){
+                        return book;
+                    }
+                }).map(function(book){
+                    return (
+                        <li>
+                            <Books/>
+                        </li>
+                    )
+                })}
                 </ol>
             </div>
             </div>
