@@ -10,10 +10,9 @@ class BooksApp extends React.Component {
     showSearchPage: false
   }
 
-  componentDidMount(){
-    BooksAPI.getAll().then((bookList) => {
-      this.setState({ bookList })
-      console.log(this.state.bookList);
+  componentDidMount(){ //based off Udacity 'Render UI with External Data' course
+    BooksAPI.getAll().then((books) => {
+      this.setState({ bookList: books })
     })
   }
 
@@ -21,9 +20,13 @@ class BooksApp extends React.Component {
     return (
       <div className="app">
         {this.state.showSearchPage ? (
-          <SearchBooks/>
+          <SearchBooks
+
+          />
         ) : (
-          <ListBooks/>
+          <ListBooks
+          bookList={ this.state.bookList }
+          />
         )}
       </div>
     )

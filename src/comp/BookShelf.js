@@ -49,6 +49,8 @@ class BookShelf extends Component {
     }
     
     render(){
+        console.log(this.props.bookList)
+
         return (
             <div className="list-books-content">
             <div className="bookshelf">
@@ -58,15 +60,13 @@ class BookShelf extends Component {
                 <li>
                    <Books/>
                 </li>
-               
                 </ol>
             </div>
             </div>
             <div className="bookshelf">
             <h2 className="bookshelf-title">Want to Read</h2>
             <div className="bookshelf-books">
-                <ol className="books-grid">
-                           
+                <ol className="books-grid">       
                 <li>
                     <Books/>
                 </li>
