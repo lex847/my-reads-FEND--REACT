@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 class Books extends Component {
 
     render() {
+        console.log(this.props.innards);
         return (
             <div className="book">
                     <div className="book-top">
