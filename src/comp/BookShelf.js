@@ -4,7 +4,7 @@ import Books from './Books'
 class BookShelf extends Component {
       
     render(){
-        let bookPass = this.props.moveBook;
+        let bookPass = this.props.moveBook; //'this inside of .map() was messing up so I had to define.. took a while to figure out
 
         return (
             <div className="list-books-content">

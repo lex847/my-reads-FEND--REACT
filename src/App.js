@@ -17,7 +17,7 @@ class BooksApp extends React.Component {
   }
 
   moveBook(){
-    console.log('yayayay')
+
   }
 
   render() {
