@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
 import Books from './Books'
+
 class BookShelf extends Component {
-    
+      
     render(){
+        let bookPass = this.props.moveBook;
 
         return (
             <div className="list-books-content">
@@ -19,7 +21,7 @@ class BookShelf extends Component {
                         <li key={book.id}>
                             <Books
                             innards={book}
-                            moveBook={this.props.moveBook}
+                            moveBook={ bookPass } 
                             />
                         </li>
                     )
@@ -40,7 +42,7 @@ class BookShelf extends Component {
                         <li key={book.id}>
                         <Books
                         innards={book}
-                        moveBook={this.props.moveBook}
+                        moveBook={ bookPass } 
                         />
                     </li>
                     )
@@ -61,7 +63,7 @@ class BookShelf extends Component {
                         <li key={book.id}> {/*Taken from Udacity React Course 10/09/18 */}
                         <Books
                         innards={book}
-                        moveBook={this.props.moveBook}
+                        moveBook={ bookPass } 
                         />
                     </li>
                     )

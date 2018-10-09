@@ -13,6 +13,7 @@ class ListBooks extends Component {
                 </div>
                     <BookShelf
                     bookList={ this.props.bookList }
+                    moveBook={ this.props.moveBook } 
                     />
                     <SearchOpen/>
             </div>

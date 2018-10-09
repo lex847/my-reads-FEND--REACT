@@ -1,19 +1,17 @@
 import React, { Component } from 'react'
 
 
-let sum = '';
 class Books extends Component {
 
     render() {
-        sum = '';
-        console.log(this.props.innards);
+        console.log(this.props);
         return (
             <div className="book">
                     <div className="book-top">
                         <div className="book-cover" style={{ width: 128, height: 193, backgroundImage: `url( ${ this.props.innards.imageLinks.thumbnail })`}}></div>
                         <div className="book-shelf-changer">
                         <select
-                        onChange={}
+                        onChange={this.props.moveBook()}
                         >
                             <option value="move" disabled>Move to...</option>
                             <option value="currentlyReading">Currently Reading</option>
