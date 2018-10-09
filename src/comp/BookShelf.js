@@ -19,6 +19,7 @@ class BookShelf extends Component {
                         <li key={book.id}>
                             <Books
                             innards={book}
+                            moveBook={this.props.moveBook}
                             />
                         </li>
                     )
@@ -39,6 +40,7 @@ class BookShelf extends Component {
                         <li key={book.id}>
                         <Books
                         innards={book}
+                        moveBook={this.props.moveBook}
                         />
                     </li>
                     )
@@ -56,9 +58,10 @@ class BookShelf extends Component {
                     }
                 }).map(function(book){
                     return (
-                        <li key={book.id}>
+                        <li key={book.id}> {/*Taken from Udacity React Course 10/09/18 */}
                         <Books
                         innards={book}
+                        moveBook={this.props.moveBook}
                         />
                     </li>
                     )

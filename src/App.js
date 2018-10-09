@@ -16,6 +16,10 @@ class BooksApp extends React.Component {
     })
   }
 
+  moveBook = () => {
+
+  }
+
   render() {
     return (
       <div className="app">
@@ -26,6 +30,7 @@ class BooksApp extends React.Component {
         ) : (
           <ListBooks
           bookList={ this.state.bookList }
+          moveBook={ this.moveBook } 
           />
         )}
       </div>
