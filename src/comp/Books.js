@@ -18,8 +18,12 @@ class Books extends Component {
                         </select>
                         </div>
                     </div>
-                    <div className="book-title"></div>
-                    <div className="book-authors"></div>
+                    <div className="book-title">{this.props.innards.title}</div>
+                    <div className="book-authors">{this.props.innards.authors.map((auth) => {
+                    return (`${auth} 
+                    
+                    `)
+                    })}</div>
             </div>
         )
     }
