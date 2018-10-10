@@ -5,7 +5,7 @@ class BookShelf extends Component {
       
     render(){
         let bookPass = this.props.moveBook; //'this inside of .map() was messing up so I had to define.. took a while to figure out
-
+        console.log(this.props);
         return (
             <div className="list-books-content">
             <div className="bookshelf">
