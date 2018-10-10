@@ -11,13 +11,17 @@ class BooksApp extends React.Component {
   }
 
   componentDidMount(){ //based off Udacity 'Render UI with External Data' course
-    BooksAPI.getAll().then((books) => {
+    BooksAPI.getAll().then((books) => { //.getAll can be found in the README.md
       this.setState({ bookList: books })
     })
   }
 
-  moveBook(){
+  moveBook = (book, shelf) => { //.update() can be found in the README.md
+    BooksAPI.update(book, shelf);
 
+    BooksAPI.getAll().then((books) => { //.getAll can be found in the README.md
+      this.setState({ bookList: books })
+    })
   }
 
   render() {
