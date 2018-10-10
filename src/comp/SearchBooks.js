@@ -3,6 +3,16 @@ import React, { Component } from 'react'
 
 class SearchBooks extends Component {
 
+    state = {       // lifted from the Udacity React course 10/10/18
+        query: ''
+    }
+
+    updateQuery = (query) => { // lifted from the Udacity React course 10/10/18
+        this.setState({
+            query: query
+        })
+    }
+
     render() {
         return (
             <div className="search-books">
