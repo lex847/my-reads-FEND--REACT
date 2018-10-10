@@ -39,8 +39,8 @@ class SearchBooks extends Component {
                         type="text" 
                         placeholder="Search by title or author"
                         value={this.state.query} // lifted from the Udacity React course 10/10/18
-                        onChange={(event) => {
-                            this.updateQuery(event.target.value)
+                        onChange={(event) => {  //
+                            this.updateQuery(event.target.value) //
                         }}
                     />
                 </div>
