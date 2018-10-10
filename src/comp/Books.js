@@ -13,7 +13,7 @@ class Books extends Component {
                         onChange={(event) => this.props.moveBook( // https://www.peterbe.com/plog/onchange-in-reactjs 10/09/18
                             this.props.innards, event.target.value
                         )}
-                        value={} // https://stackoverflow.com/questions/43495696/how-to-set-a-default-value-in-react-select 10/10/18
+                        value={this.props.defaultShelf} // https://stackoverflow.com/questions/43495696/how-to-set-a-default-value-in-react-select 10/10/18
                         >
                             <option value="move" disabled>Move to...</option>
                             <option value="currentlyReading">Currently Reading</option>

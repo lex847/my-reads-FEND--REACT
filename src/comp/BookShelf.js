@@ -22,7 +22,7 @@ class BookShelf extends Component {
                             <Books
                             innards={book}
                             moveBook={ bookPass }
-                            defaultShelf={ 'currentlyReading' } 
+                            defaultShelf='currentlyReading'
                             />
                         </li>
                     )
@@ -44,7 +44,7 @@ class BookShelf extends Component {
                         <Books
                         innards={book}
                         moveBook={ bookPass }
-                        defaultShelf={ 'wantToRead' } 
+                        defaultShelf='wantToRead' 
  
                         />
                     </li>
@@ -67,7 +67,7 @@ class BookShelf extends Component {
                         <Books
                         innards={book}
                         moveBook={ bookPass } 
-                        defaultShelf={ 'read' } 
+                        defaultShelf='read'
 
                         />
                     </li>
