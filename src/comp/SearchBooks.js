@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 import * as BooksAPI from '../BooksAPI'
 import Books from './Books'
+import escapeRegExp from 'escape-string-regexp'
 
 class SearchBooks extends Component {
-    
+
     state = {       // lifted from the Udacity React course 10/10/18
         query: '',
         booksSearched: []
@@ -13,15 +14,17 @@ class SearchBooks extends Component {
         this.setState({
             query: query
         })
+        this.pullSearchedBooks(query);
     }
 
     pullSearchedBooks = (query) => {
-        BooksAPI.search(query).then((booksSearched) => {
-            this.setState({ booksSearched })
+        BooksAPI.search(query).then((searched) => {
+            this.setState({ booksSearched: searched })
         })
     }
 
     render() {
+       // let booksSearchedVar = this.state.booksSearched;
         return (
             <div className="search-books">
                 <div className="search-books-bar">
