@@ -18,13 +18,19 @@ class SearchBooks extends Component {
     }
 
     pullSearchedBooks = (query) => {
+    if(query){
         BooksAPI.search(query).then((searched) => {
             this.setState({ booksSearched: searched })
         })
+    } else{
+        this.setState({ booksSearched: [] })
+    }
+
     }
 
     render() {
        // let booksSearchedVar = this.state.booksSearched;
+       console.log(this.state.booksSearched);
         return (
             <div className="search-books">
                 <div className="search-books-bar">
@@ -50,13 +56,13 @@ class SearchBooks extends Component {
                 </div>
                 <div className="search-books-results">
                     <ol className="books-grid">
-                        {this.state.booksSearched.map(function(searched){
-                            (<li key={searched.id}>
+                        {this.state.booksSearched.map(booksSearched => 
+                            (<li key={booksSearched.id}>
                                 <Books
-                                    book={searched}
+                                    innards={booksSearched}
                                 />
                             </li>)
-                        })}
+                        )}
                     </ol>
                 </div>
             </div>
