@@ -7,7 +7,7 @@ class Books extends Component {
         return (
             <div className="book">
                     <div className="book-top">
-                        <div className="book-cover" style={{ width: 128, height: 193, backgroundImage: `url( ${ this.props.innards.imageLinks.thumbnail })`}}></div>
+                        <div className="book-cover" style={{ width: 128, height: 193, backgroundImage: `url( ${ this.props.innards.imageLinks.thumbnail ? this.props.innards.imageLinks.thumbnail : ''})`}}></div>
                         <div className="book-shelf-changer">
                         <select
                         onChange={(event) => this.props.moveBook( // https://www.peterbe.com/plog/onchange-in-reactjs 10/09/18
