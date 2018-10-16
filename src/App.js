@@ -29,7 +29,7 @@ class BooksApp extends React.Component {
       <div className="app">
         {//this.state.showSearchPage ? (
           <SearchBooks
-
+          moveBook={ this.moveBook } 
           />
         //) : (
         //  <ListBooks
