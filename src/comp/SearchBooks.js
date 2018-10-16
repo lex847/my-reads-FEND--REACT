@@ -64,6 +64,7 @@ class SearchBooks extends Component {
                             (<li key={booksSearched.id}>
                                 <Books
                                     innards={booksSearched}
+                                    moveBook={ this.props.moveBook } 
                                 />
                             </li>)
                         )}

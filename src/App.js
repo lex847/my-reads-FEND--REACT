@@ -27,17 +27,15 @@ class BooksApp extends React.Component {
   render() {
     return (
       <div className="app">
-        {//this.state.showSearchPage ? (
-          <SearchBooks
-          moveBook={ this.moveBook } 
-          />
-        //) : (
-        //  <ListBooks
-        //  bookList={ this.state.bookList }
-        //  moveBook={ this.moveBook } 
-        //  />
-        //)
-      }
+        {//<SearchBooks
+          //moveBook={ this.moveBook } 
+          ///>
+        }
+        <ListBooks
+         bookList={ this.state.bookList }
+         moveBook={ this.moveBook } 
+        />
+      
       </div>
     )
   }
