@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import * as BooksAPI from '../BooksAPI'
 import Books from './Books'
 import escapeRegExp from 'escape-string-regexp'
+import { Link } from 'react-router-dom' //https://stackoverflow.com/questions/40016202/reactjs-link-tag-uncaught-referenceerror-link-is-not-defined 10/16/18
+
 
 class SearchBooks extends Component {
 
@@ -38,7 +40,11 @@ class SearchBooks extends Component {
         return (
             <div className="search-books">
                 <div className="search-books-bar">
-                    <a className="close-search" onClick={() => this.setState({ showSearchPage: false })}>Close</a>
+                    <Link 
+                        to='/'
+                        className="close-search"
+                    >Close</Link>
+
                 <div className="search-books-input-wrapper">
                     {/*
                     NOTES: The search from BooksAPI is limited to a particular set of search terms.
