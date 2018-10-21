@@ -22,10 +22,12 @@ class SearchBooks extends Component {
     pullSearchedBooks = (query) => {
     if(query){
         BooksAPI.search(query).then((searched) => {
-            if(searched.error){ //any errors still produce an array for .map()
-                this.setState({ booksSearched: [] })
-            } else {
-                this.setState({ booksSearched: searched })
+            if(query === this.state.query){//added check as per Udacity review
+                if(searched.error){ //any errors still produce an array for .map()
+                    this.setState({ booksSearched: [] })
+                } else {
+                    this.setState({ booksSearched: searched })
+                }
             }
         })
     } else{
