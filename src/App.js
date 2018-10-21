@@ -20,16 +20,12 @@ class BooksApp extends React.Component {
   moveBook = (book, shelf) => { //.update() can be found in the README.md
     BooksAPI.update(book, shelf)
     .then((books) => {
-        BooksAPI.getAll(books)
+        BooksAPI.getAll(books) // corrected after Udacity Review 10/21/18
         .then((books) => { //.getAll can be found in the README.md
           this.setState({ bookList: books })
         })
       }
     );
-
-    /*BooksAPI.getAll().then((books) => { //.getAll can be found in the README.md
-      this.setState({ bookList: books })
-    })*/
   }
 
   render() {

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import * as BooksAPI from '../BooksAPI'
 import Books from './Books'
-import escapeRegExp from 'escape-string-regexp'
+//import escapeRegExp from 'escape-string-regexp'
 import { Link } from 'react-router-dom' //https://stackoverflow.com/questions/40016202/reactjs-link-tag-uncaught-referenceerror-link-is-not-defined 10/16/18
 
 
@@ -71,6 +71,7 @@ class SearchBooks extends Component {
                                 <Books
                                     innards={booksSearched}
                                     moveBook={ this.props.moveBook } 
+                                    defaultShelf='none'
                                 />
                             </li>)
                         )}
