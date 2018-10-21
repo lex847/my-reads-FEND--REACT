@@ -36,7 +36,7 @@ class SearchBooks extends Component {
 
     render() {
        // let booksSearchedVar = this.state.booksSearched;
-       console.log(this.state.booksSearched);
+       console.log(this.props);
         return (
             <div className="search-books">
                 <div className="search-books-bar">
@@ -66,14 +66,23 @@ class SearchBooks extends Component {
                 </div>
                 <div className="search-books-results">
                     <ol className="books-grid">
-                        {this.state.booksSearched.map(booksSearched => 
-                            (<li key={booksSearched.id}>
+                        {this.state.booksSearched.map(booksSearched => {
+                            let searchedShelf = 'none';
+
+                            this.props.bookList.map(book => (
+                                book.id === booksSearched.id ? searchedShelf = book.shelf : ''
+                            ));
+
+                            return (
+                                <li key={booksSearched.id}>
                                 <Books
                                     innards={booksSearched}
                                     moveBook={ this.props.moveBook } 
-                                    defaultShelf='none'
+                                    defaultShelf={searchedShelf}
                                 />
-                            </li>)
+                            </li>
+                            )
+                        }
                         )}
                     </ol>
                 </div>
